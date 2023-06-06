@@ -47,7 +47,7 @@ body{
 
 @media screen and (max-width: 1000px){
     body{
-        padding: 0 1rem;
+        padding: 0 1.3rem;
         overflow-x: hidden !important;
     }
     .herosection{
