@@ -24,6 +24,10 @@ body{
     display: flex;
     justify-content: space-between;
 }
+a{
+    color: #FFF;
+    text-decoration: none;
+}
 
 .header__right{
     background: transparent;
@@ -62,8 +66,9 @@ body{
         font-size: .92rem;
     }
     .herosection__app img{
-        width: 100%;
-        height: auto;
+        max-width:270px !important;
+        height: auto !important; 
+        margin-left: 0 !important;
     }
 
     form{
@@ -125,11 +130,17 @@ input::placeholder{
     color: #FFF;
     font-family: "DM Sans" !important;
 }
+.herosection__app img{
+    max-height: 800px;
+    max-width: 120%;
+    margin-left: 10rem;
+}
 /* HEROSECTION ENDS HERE */
 
 /* FOOTER */
 .footer{
     padding-top: 7rem;
+    padding-bottom: 3rem;
 }
 .footer__content{
     max-width: 500px;
