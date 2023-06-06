@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #FFF;
+    font-family: "DM Sans" !important;
+    background: #1E1E1E;
+    color: #FFF;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* HEADER */
+.header{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__right{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    font-size: .93rem;
+    opacity: .9;
+}
+/* END OF HEADER */
+
+/* HEROSECTION */
+.herosection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin-top: 7rem;
+}
+
+@media screen and (max-width: 1000px){
+    body{
+        padding: 0 1rem;
+        overflow-x: hidden !important;
+    }
+    .herosection{
+        display: flex;
+        flex-direction: column;
+    }
+    .herosection__text h1{
+        font-size: 2.3rem !important;
+    }
+    .herosection__text p{
+        opacity: .8;
+        font-size: .92rem;
+    }
+    .herosection__app img{
+        width: 100%;
+        height: auto;
+    }
+
+    form{
+        max-width: 100% !important;
+    }
+    .footer{
+        padding-top: 5rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+.herosection__text h1{
+    font-weight: 900;
+    font-family: "DM Sans";
+    font-size: 3.3rem;
+    padding-bottom: .7rem;
+}
+.herosection__text p{
+    padding-bottom: 1.5rem;
+    line-height: 1.8;
+    opacity: .9;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    font-family: "DM Sans" !important;
+}
+input{
+    height: 3.8rem;
+    margin-bottom: 1.2rem;
+    padding: .5rem 1rem;
+    background: rgba(255, 255, 255, 0.4);
+    border: none !important;
+    box-shadow: none !important;
+    color: #FFF;
+    font-family: "DM Sans" !important;
+    outline: none !important;
+    
+}
+.input:focus{
+    border: none !important;
+    outline: none !important;
+    background: red !important;
+}
+input::placeholder{
+    color: #FFF;
+    font-family: "DM Sans" !important;
+}
+.button{
+    height: 3.8rem;
+    cursor: pointer;
+    /* background: rgba(254, 0, 0, 0.8); */
+    background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223));
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: "DM Sans" !important;
+}
+/* HEROSECTION ENDS HERE */
+
+/* FOOTER */
+.footer{
+    padding-top: 7rem;
+}
+.footer__content{
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer__content h4{
+    line-height: 1.8;
+}
+
+.footer__content .socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem 0;
+}
+
+.footer__content .socials a{
+    color: #FFF;
+}
+
+.footer__content p{
+    font-size: .9rem;
+    opacity: .85;
+}
