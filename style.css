@@ -62,6 +62,16 @@ a{
     .ball3{
         display: none;
     }
+    .square3{
+        display: none;
+    }
+    .square4{
+        display: none;
+    }
+    .square{
+        height: 12px !important;
+        width: 12px !important;
+    }
     .square5{
         display: none;
     }
