@@ -9,9 +9,10 @@
 body{
     background: #FFF;
     font-family: "DM Sans" !important;
-    background: #1E1E1E;
+    background: #1b1b1b;
     color: #FFF;
     height: 100vh;
+    position: relative;
 }
 
 .container{
@@ -20,7 +21,8 @@ body{
 }
 /* HEADER */
 .header{
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
+    padding-top: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -43,20 +45,33 @@ a{
 
 /* HEROSECTION */
 .herosection{
+    max-width: 7500px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
+    text-align: center;
     margin-top: 7rem;
 }
 
 @media screen and (max-width: 1000px){
     body{
-        padding: 0 1.5rem;
+        /* padding: 0 1.5rem; */
         overflow-x: hidden !important;
+        height: 100vh !important;
+        overflow-y: hidden !important;
+    }
+    .ball3{
+        display: none;
+    }
+    .square5{
+        display: none;
+    }
+    .header{
+        padding: 1.5rem 1.5rem;
     }
     .herosection{
         display: flex;
         flex-direction: column;
+        padding: 0 1.5rem;
     }
     .herosection__text h1{
         font-size: 2.3rem !important;
@@ -64,19 +79,15 @@ a{
     .herosection__text p{
         opacity: .8;
         font-size: .92rem;
-    }
-    .herosection__app img{
-        max-width:270px !important;
-        height: auto !important; 
-        margin-left: 0 !important;
+        max-width: 100% !important;
     }
 
     form{
         max-width: 100% !important;
     }
     .footer{
-        padding-top: 5rem !important;
-        padding-bottom: 2rem !important;
+        padding-top: 12rem !important;
+        padding-bottom: 1rem !important;
     }
 }
 
@@ -87,18 +98,23 @@ a{
     padding-bottom: .7rem;
 }
 .herosection__text p{
-    padding-bottom: 1.5rem;
+    padding-bottom: .5rem;
     line-height: 1.8;
     opacity: .9;
+    max-width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
 }
 form{
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    max-width: 50%;
     font-family: "DM Sans" !important;
+    margin: 0 auto;
+    padding-top: 3rem;
 }
 input{
-    height: 3.8rem;
+    height: 3.5rem;
     margin-bottom: 1.2rem;
     padding: .5rem 1rem;
     background: rgba(255, 255, 255, 0.4);
@@ -119,7 +135,7 @@ input::placeholder{
     font-family: "DM Sans" !important;
 }
 .button{
-    height: 3.8rem;
+    height: 3.5rem;
     cursor: pointer;
     /* background: rgba(254, 0, 0, 0.8); */
     background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223));
@@ -130,11 +146,7 @@ input::placeholder{
     color: #FFF;
     font-family: "DM Sans" !important;
 }
-.herosection__app img{
-    max-height: 800px;
-    max-width: 120%;
-    margin-left: 10rem;
-}
+
 /* HEROSECTION ENDS HERE */
 
 /* FOOTER */
@@ -167,4 +179,153 @@ input::placeholder{
 .footer__content p{
     font-size: .9rem;
     opacity: .85;
+}
+
+/* Animation */
+  @keyframes move-ball {
+    0%    { opacity: 0; }
+    20%   { opacity: 1; }
+    80%   { opacity: 0; }
+    100%  { opacity: 1; }
+   from{
+       transform: translateY(13rem);
+   } 
+   to{
+    transform: translateY(-20rem);
+   }
+  }
+
+  @keyframes move-ball-2 {
+    from{
+        transform: translateY(-10rem);
+    } 
+    to{
+     transform: translateY(10rem);
+    }
+   }
+  
+
+  /* Animated Balls */
+  .animated__balls{
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+  }
+
+  .ball{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50px;
+  }
+
+  .square{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50px;
+    background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223));
+  }
+
+
+  .ball1{
+    /* background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223)); */
+    background-color: #1e1e1e;
+    right: 0;
+    border-radius: 0;
+    height: 100px;
+    width: 100px;
+    border-bottom-left-radius: 100px;
+    top: 0;
+    animation: name-of-animation 5s infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  .ball2{
+    /* background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223)); */
+    background-color: #1e1e1e;
+    left: 0;
+    border-radius: 0;
+    height: 100px;
+    width: 100px;
+    border-top-right-radius: 100px;
+    bottom: 0;
+    /* animation: name-of-animation 5s infinite;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse; */
+}
+
+.ball3{
+    /* background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223)); */
+    background-color: #1e1e1e;
+    left: 0;
+    border-radius: 0;
+    height: 100px;
+    width: 100px;
+    border-bottom-right-radius: 100px;
+    top: 0;
+    animation: name-of-animation 5s infinite;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+}
+
+.ball4{
+    /* background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223)); */
+    background-color: #1e1e1e;
+    right: 0;
+    border-radius: 0;
+    height: 100px;
+    width: 100px;
+    border-top-left-radius: 100px;
+    bottom: 0;
+    /* animation: name-of-animation 5s infinite;
+    animation-delay: 6s;
+    animation-direction: alternate-reverse; */
+  }
+
+  .square1{
+    animation: move-ball-2 2s infinite;
+    left: 2rem;
+  }
+
+  .square2{
+    right: 2rem;
+    animation: move-ball-2 2s infinite;
+  }
+
+  .square3{
+    right: 20rem;
+    top: 30rem;
+    animation: move-ball 2s infinite;
+    animation-direction: alternate-reverse;
+}
+
+.square4{
+    left: 20rem;
+    top: 30rem;
+    animation: move-ball 2s infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 3s;
+}
+
+.square5{
+    left: 43rem;
+    top: 35rem;
+    animation: move-ball 2s infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 6s;
+}
+
+.square6{
+    left: 2rem;
+    bottom: 0;
+    animation: move-ball 2s infinite;
+    /* animation-delay: 6s; */
+}
+
+.square7{
+    right: 2rem;
+    bottom: 0;
+    animation: move-ball 2s infinite;
+    animation-delay: 3s;
 }
