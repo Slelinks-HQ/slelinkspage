@@ -11,7 +11,8 @@ body{
     font-family: "DM Sans" !important;
     background: #1b1b1b;
     color: #FFF;
-    height: 100vh;
+    height: 100vh !important;
+    overflow-y: hidden !important;
     position: relative;
 }
 
@@ -156,9 +157,10 @@ input::placeholder{
 }
 .button{
     height: 3.5rem;
-    cursor: pointer;
+    cursor: pointer !important;
     /* background: rgba(254, 0, 0, 0.8); */
-    background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223));
+    /* background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223)); */
+    background-color: #1769FD;
     border: none;
     display: flex;
     justify-content: center;
@@ -208,19 +210,19 @@ input::placeholder{
     80%   { opacity: 0; }
     100%  { opacity: 1; }
    from{
-       transform: translateY(13rem);
+       transform: translateY(6rem);
    } 
    to{
-    transform: translateY(-20rem);
+    transform: translateY(-10rem);
    }
   }
 
   @keyframes move-ball-2 {
     from{
-        transform: translateY(-10rem);
+        transform: translateY(-5rem);
     } 
     to{
-     transform: translateY(10rem);
+     transform: translateY(5rem);
     }
    }
   
@@ -230,6 +232,7 @@ input::placeholder{
       position: absolute;
       height: 100vh;
       width: 100%;
+      z-index: -10;
   }
 
   .ball{
@@ -270,6 +273,7 @@ input::placeholder{
     width: 100px;
     border-top-right-radius: 100px;
     bottom: 0;
+    display: none;
     /* animation: name-of-animation 5s infinite;
     animation-delay: 2s;
     animation-direction: alternate-reverse; */
