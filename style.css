@@ -30,6 +30,10 @@ a{
     color: #FFF;
     text-decoration: none;
 }
+.logo{
+    max-width: 50px;
+    height: auto;
+}
 
 .header__right{
     background: transparent;
@@ -236,8 +240,8 @@ input::placeholder{
   }
 
   .square{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     position: absolute;
     border-radius: 50px;
     background: linear-gradient( to right, rgba(217,66,107), rgba(163,31,223));
